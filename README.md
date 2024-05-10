@@ -166,7 +166,7 @@ The API will be available at `http://localhost:8000/` or `http://127.0.0.1:8000/
 - **Authorization:** Required (JWT token in header).
 - **Response:** Success message if the file is deleted successfully.
 
-#### 6. Get List of Files by Anonymous User
+### 6. Get List of Files by Anonymous User
 
 - **Endpoint:** `/public_view/`
 - **Method:** `GET`
@@ -205,6 +205,7 @@ The API will be available at `http://localhost:8000/` or `http://127.0.0.1:8000/
 - Response: Updated user status.
 
 ## Authentication and Access Control
+
 
 ### Authentication
 
