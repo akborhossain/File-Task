@@ -160,7 +160,7 @@ The API will be available at `http://localhost:8000/` or `http://127.0.0.1:8000/
 
 - **Endpoint:** `/file_up/<int:pk>/`
 - **Method:** `DELETE`
-- **Description:** Delete a specific file.
+- **Description:** Delete a specific file. Only super user can delete.
 - **Parameters:** 
   - `pk`: ID of the file.
 - **Authorization:** Required (JWT token in header).
@@ -204,8 +204,21 @@ The API will be available at `http://localhost:8000/` or `http://127.0.0.1:8000/
 - Authorization: JWT Token in header.
 - Response: Updated user status.
 
+## Authentication and Access Control
+
 ## Authentication
 
-This API uses JSON Web Tokens (JWT) for authentication. Include the token in the `Authorization` header for protected endpoints. 
+Authentication in this project is handled using JSON Web Tokens (JWT). When a user logs in or authenticates, they receive a JWT token which they can include in the headers of subsequent requests to authenticate themselves.
 
 Example: Authorization: Bearer <access_token>
+
+
+### Access Control
+
+There are many way for access control (custom class permissions). Access control is managed using Django's default User model and its built-in permissions system. There are three types of users:
+
+1. **Active User**: A regular user account. These users have basic access and permissions in the system. These user can only read permisions in this project.
+
+2. **Staff User**: Staff users have additional permissions compared to regular users. They can perform certain administrative tasks. These users can read , write and update permisions in this project.
+
+3. **Superuser**: Superusers have full control and access to the system. They can perform administrative tasks and have access to all features.
