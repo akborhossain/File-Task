@@ -234,8 +234,7 @@ class UserStatusView(APIView):
         query = User.objects.filter(id=pk).last()
         if query is not None:
             if request.user.is_superuser or request.user.is_staff:
-                if request.user.is_staff:
-
+                if request.user.is_staff and not request.user.is_superuser:
                     if 'is_staff' in request.data:
                         query.is_staff = request.data.get('is_staff')
                         query.save()
