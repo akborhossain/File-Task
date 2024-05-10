@@ -206,7 +206,7 @@ The API will be available at `http://localhost:8000/` or `http://127.0.0.1:8000/
 
 ## Authentication and Access Control
 
-## Authentication
+### Authentication
 
 Authentication in this project is handled using JSON Web Tokens (JWT). When a user logs in or authenticates, they receive a JWT token which they can include in the headers of subsequent requests to authenticate themselves.
 
