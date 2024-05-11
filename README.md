@@ -44,7 +44,7 @@ This Django REST API provides endpoints for user authentication, file upload, fi
 
     ![Database ERD](erd_diagram.png)
 
-    This is the Entity-Relationship Diagram (ERD) representing the structure of our database.
+    This is the Entity-Relationship Diagram (ERD) representing the structure of my database.
 
 2. Perform migrations:
    If you've changed the database settings or models, you'll need to perform migrations using the following command:
