@@ -42,6 +42,10 @@ This Django REST API provides endpoints for user authentication, file upload, fi
 
     I've configured the project to use SQLite database, so there's no need for additional setup. However, if you prefer to use a different database, you can modify the database settings in `settings.py` accordingly.
 
+    ![Database ERD](erd_diagram.png)
+
+    This is the Entity-Relationship Diagram (ERD) representing the structure of my database.
+
 2. Perform migrations:
    If you've changed the database settings or models, you'll need to perform migrations using the following command:
     ```bash
